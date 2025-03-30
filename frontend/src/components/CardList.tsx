@@ -16,21 +16,24 @@ const CardList: Component = () => {
   ];
 
   return (
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
       <For each={cards}>
         {(card: Card) => (
-          <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-            <div class="h-64 bg-pink-100 flex items-center justify-center">
-              <img 
-                src={`/images/${card.image}`} 
+          <div class="bg-white rounded-xl shadow-md overflow-hidden transform hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+            <div class="relative h-72 bg-gradient-to-t from-pink-50 to-transparent">
+              <img
+                src={`/images/${card.image}`}
                 alt={card.title}
-                class="max-h-full object-cover"
+                class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
               />
+              <span class="absolute top-2 right-2 bg-pink-500 text-white text-xs font-semibold px-2 py-1 rounded-full">
+                New
+              </span>
             </div>
-            <div class="p-4">
-              <h3 class="text-lg font-semibold text-pink-800">{card.title}</h3>
-              <p class="text-pink-600">₹{card.price}</p>
-              <button class="mt-2 bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600 transition-colors">
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-pink-900 mb-2">{card.title}</h3>
+              <p class="text-pink-700 font-medium">₹{card.price.toLocaleString()}</p>
+              <button class="mt-4 w-full bg-gradient-to-r from-pink-500 to-rose-500 text-white px-4 py-2 rounded-lg font-semibold hover:from-pink-600 hover:to-rose-600 transition-all duration-200 active:scale-95">
                 Add to Cart
               </button>
             </div>
