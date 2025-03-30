@@ -1,19 +1,17 @@
-import { createSignal, onMount } from "solid-js";
+// src/App.tsx
+import { Component } from 'solid-js';
+import CardList from './components/CardList';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
-const App = () => {
-  const [message, setMessage] = createSignal("Loading...");
-
-  onMount(() => {
-    fetch("api/hello/")
-      .then((res) => res.json())
-      .then((data) => setMessage(data.message))
-      .catch((err) => setMessage("Error: " + err.message));
-  });
-
+const App: Component = () => {
   return (
-    <div class="tw-p-6">
-      <h1 class="text-2xl font-bold mb-4">SolidJS + Django</h1>
-      <p>{message()}</p>
+    <div class="min-h-screen bg-pink-50 flex flex-col">
+      <Header />
+      <main class="flex-grow container mx-auto px-4 py-8">
+        <CardList />
+      </main>
+      <Footer />
     </div>
   );
 };
