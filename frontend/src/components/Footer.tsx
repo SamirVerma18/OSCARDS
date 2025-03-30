@@ -1,31 +1,80 @@
-// src/components/Footer.tsx
 import { Component } from 'solid-js';
 
 const Footer: Component = () => {
   return (
-    <footer class="bg-pink-200 mt-8">
-      <div class="container mx-auto px-4 py-6">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div>
-            <h4 class="text-pink-800 font-semibold">About Us</h4>
-            <p class="text-pink-600">Premium shadi cards for your special day</p>
-          </div>
-          <div>
-            <h4 class="text-pink-800 font-semibold">Contact</h4>
-            <p class="text-pink-600">support@shadicards.com</p>
-            <p class="text-pink-600">+91 123-456-7890</p>
-          </div>
-          <div>
-            <h4 class="text-pink-800 font-semibold">Follow Us</h4>
-            <div class="flex space-x-2">
-              <a href="#" class="text-pink-600 hover:text-pink-800">Facebook</a>
-              <a href="#" class="text-pink-600 hover:text-pink-800">Instagram</a>
-            </div>
-          </div>
-        </div>
+    <div style={{
+      display: 'flex',
+      "align-items": 'center',
+      gap: '8px',
+      "font-family": "'Poppins', sans-serif",
+    }}>
+      {/* Icon */}
+      <div style={{
+        width: '40px',
+        height: '40px',
+        "background-color": '#f50057',
+        "border-radius": '50%',
+        display: 'flex',
+        "justify-content": 'center',
+        "align-items": 'center',
+        "box-shadow": '0 4px 6px rgba(0, 0, 0, 0.1)',
+      }}>
+        <span style={{ color: '#fff', "font-size": '18px', "font-weight": 'bold' }}>SC</span>
       </div>
-    </footer>
+      
+      {/* Text */}
+      <div>
+        <h1 style={{
+          margin: '0',
+          "font-size": '24px',
+          color: '#f50057',
+          "font-weight": 'bold',
+        }}>
+          OnlineShaadiCards
+        </h1>
+      </div>
+    </div>
   );
 };
 
 export default Footer;
+
+
+// import { Component } from 'solid-js';
+
+// const Header: Component = () => {
+//   return (
+//     <header
+//       style={{
+//         position: "fixed",
+//         top: "0",
+//         left: "0",
+//         width: "100%",
+//         "background-color": "#f50057",
+//         padding: "1px 1px",
+//         "z-index": "10",
+//       }}
+//     >
+//       <div style={{
+//       display: 'flex',
+//       "align-items": 'center',
+//       gap: '8px',
+//       "font-family": "'Poppins', sans-serif",
+//     }}>
+//       {/* Text */}
+//       <div>
+//         <h1 style={{
+//           margin: '0',
+//           "font-size": '20px',
+//           color: '#ffffff',
+//           "font-weight": 'bold',
+//         }}>
+//           OnlineShaadiCards
+//         </h1>
+//       </div>
+//     </div>
+//     </header>
+//   );
+// };
+
+// export default Header;

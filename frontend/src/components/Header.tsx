@@ -1,30 +1,61 @@
-// src/components/Header.tsx
 import { Component } from 'solid-js';
 
 const Header: Component = () => {
   return (
-    <header class="bg-gradient-to-r from-pink-300 via-rose-200 to-pink-200 shadow-lg sticky top-0 z-10">
-      <div class="container mx-auto px-6 py-4 flex items-center justify-between">
-        <h1 class="text-3xl font-extrabold text-pink-900 tracking-tight">
-          <a href="/" class="hover:text-pink-700 transition-colors duration-200">
-            Shadi Cards Online
-          </a>
+    <header
+      style={{
+        position: "fixed",
+        top: "0",
+        left: "0",
+        width: "100%",
+        "background-color": "#f50057",
+        padding: "10px 20px",
+        "z-index": "10",
+        display: "flex",
+        "align-items": "center",
+      }}
+    >
+      <a
+        href="/"
+        style={{
+          display: "flex",
+          "align-items": "center",
+          gap: "10px",
+          color: "#ffffff",
+          "text-decoration": "none",
+          cursor: "pointer",
+          margin: "0 20px",
+        }}
+      >
+        {/* Logo Icon */}
+        <div
+          style={{
+            width: "30px",
+            height: "30px",
+            "background-color": "#ffffff",
+            "border-radius": "50%",
+            display: "flex",
+            "justify-content": "center",
+            "align-items": "center",
+            "box-shadow": "0 4px 6px rgba(0, 0, 0, 0.2)",
+          }}
+        >
+          <span style={{ color: "#f50057", "font-size": "10px", "font-weight": "bold" }}>OSC</span>
+        </div>
+
+        {/* Logo Text */}
+        <h1
+          style={{
+            margin: "0",
+            color: "#ffffff",
+            "font-size": "15px",
+            "font-weight": "bold",
+            "font-family": "'Poppins', sans-serif",
+          }}
+        >
+          OnlineShaadiCards
         </h1>
-        <nav class="bg-white bg-opacity-90 backdrop-blur-md rounded-full px-6 py-2 shadow-md">
-          <ul class="flex space-x-6">
-            {["Home", "Cards", "Contact"].map((item) => (
-              <li>
-                <a
-                  href="#"
-                  class="text-pink-700 font-semibold text-base uppercase tracking-wide hover:text-pink-900 hover:underline underline-offset-4 transition-all duration-200"
-                >
-                  {item}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </div>
+      </a>
     </header>
   );
 };
